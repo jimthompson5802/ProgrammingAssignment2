@@ -2,7 +2,7 @@
 ## for large matrices.  To speed up processing this file contains two functions
 ## that provide the ability to cache the inverse of a matrix. If the contents of
 ## a matrix do not change, then the inverse is looked up in the cache rather 
-## than recomputed. 
+## than recomputed.
 
 ## makeCacheMatrix() - creates a user-defined square matrix that caches
 ## it's inverse.  Square matrix is assumed to be invertible
