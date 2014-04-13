@@ -1,7 +1,7 @@
 Unit Test for Programming Assignment 2
 ========================================================
 
-This is the documentation for the test cases for Programming Assignment 2
+This is the documentation for the test cases for Programming Assignment 2.
 
 Source Code
 -----------
