@@ -14,6 +14,9 @@
 ##
 
 makeCacheMatrix <- function(x = matrix()) {
+    ## function parameters:
+    ##   x - square, invertible matrix
+    
     ## initialize cache location on initial call
     m <- NULL
     
@@ -43,6 +46,9 @@ makeCacheMatrix <- function(x = matrix()) {
 ## cacheSolve() - return matrix inverse of the user-defined matrix 
 
 cacheSolve <- function(x, ...) {
+    ## function parameters:
+    ##   x - list of helper functions created by makeCacheMatrix() function
+    
     ## get cached inverse of the specified matrix
     m <- x$getInverse()
     
