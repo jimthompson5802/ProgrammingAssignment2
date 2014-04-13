@@ -1,7 +1,7 @@
 Unit Test for Programming Assignment 2
 ========================================================
 
-This is the documentation for the test cases for Programming Assignment 2
+This is the documentation for the test cases for Programming Assignment 2.
 
 Source Code
 -----------
@@ -114,7 +114,7 @@ system.time(m1 <- cacheSolve(mat))
 
 ```
 ##    user  system elapsed 
-##    8.77    0.02    8.81
+##    9.14    0.03    9.22
 ```
 
 ```r
@@ -129,7 +129,7 @@ system.time(m2 <- cacheSolve(mat))
 
 ```
 ##    user  system elapsed 
-##       0       0       0
+##    0.01    0.00    0.02
 ```
 
 ```r
