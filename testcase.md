@@ -114,7 +114,7 @@ system.time(m1 <- cacheSolve(mat))
 
 ```
 ##    user  system elapsed 
-##   16.03    0.19   16.35
+##   16.15    0.03   16.24
 ```
 
 ```r
