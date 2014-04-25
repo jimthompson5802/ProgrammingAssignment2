@@ -25,8 +25,9 @@ source("cachematrix.r", echo = TRUE)
 ## +     m <- x$getInverse()
 ## +     if (!is.null(m)) {
 ## +         message("getting cached data")
-## +         return(m)
-## +   .... [TRUNCATED]
+## +     }
+## +     else {
+## +  .... [TRUNCATED]
 ```
 
 
@@ -113,7 +114,7 @@ system.time(m1 <- cacheSolve(mat))
 
 ```
 ##    user  system elapsed 
-##   15.88    0.06   15.99
+##   16.03    0.19   16.35
 ```
 
 ```r
