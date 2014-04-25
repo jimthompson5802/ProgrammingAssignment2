@@ -57,16 +57,19 @@ cacheSolve <- function(x, ...) {
     ## retrieve the matrix inverse
     m <- x$getInverse()
     
-    ## if the inverse is available in cache, return the cached value
+    
     if(!is.null(m)) {
-        ## just output message
+        
+        ## if the inverse is available in cache, just output message
         message("getting cached data")
+    
     } else {
+        
         ## if cache is not availalbe, compute matrix inverse
         data <- x$get()
         m <- solve(data, ...)
 
-        ## cache the matrix inverse and return the inverse
+        ## cache the matrix inverse
         x$setInverse(m)
     }
     
