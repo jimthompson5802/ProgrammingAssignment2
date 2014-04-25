@@ -63,8 +63,7 @@ cacheSolve(mat)
 
 ```r
 
-## retrieve matrix inverse again now should see message that marix is from
-## cache
+## retrieve matrix inverse again should see message that marix is from cache
 cacheSolve(mat)
 ```
 
@@ -81,7 +80,7 @@ cacheSolve(mat)
 ```r
 
 
-## show caculation of identity matrix from inverse
+## multiple the matrix with its inverse this results in the identity matrix
 mat$get() %*% cacheSolve(mat)
 ```
 
@@ -105,7 +104,7 @@ This test case will show timing differences for large matrix
 ```r
 ## define large n-by-n square matrix
 set.seed(1)
-n <- 2000
+n <- 2500
 mat <- makeCacheMatrix(matrix(sample(n^2), ncol = n))
 
 ## first-time retrieval of inverse
@@ -114,12 +113,13 @@ system.time(m1 <- cacheSolve(mat))
 
 ```
 ##    user  system elapsed 
-##    9.14    0.03    9.22
+##   15.88    0.06   15.99
 ```
 
 ```r
 
-## second-time retrieval of inverse
+## second-time retrieval of inverse should be faster elapsed time should be
+## less than the first-time retrieval
 system.time(m2 <- cacheSolve(mat))
 ```
 
@@ -129,12 +129,12 @@ system.time(m2 <- cacheSolve(mat))
 
 ```
 ##    user  system elapsed 
-##    0.01    0.00    0.02
+##       0       0       0
 ```
 
 ```r
 
-## Test if first and second retrievals are the same
+## Test if first and second retrievals are the same this should return TRUE
 identical(m1, m2)
 ```
 
