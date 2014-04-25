@@ -59,16 +59,19 @@ cacheSolve <- function(x, ...) {
     
     ## if the inverse is available in cache, return the cached value
     if(!is.null(m)) {
+        ## just output message
         message("getting cached data")
-        return(m)
+    } else {
+        ## if cache is not availalbe, compute matrix inverse
+        data <- x$get()
+        m <- solve(data, ...)
+
+        ## cache the matrix inverse and return the inverse
+        x$setInverse(m)
     }
     
-    ## if cache is not availalbe, compute matrix inverse
-    data <- x$get()
-    m <- solve(data, ...)
+    ## return inverse
+    return(m)
     
-    ## cache the matrix inverse and return the inverse
-    x$setInverse(m)
-    m
 }
 
